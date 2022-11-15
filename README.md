@@ -65,8 +65,14 @@ You can also use framework binary file `EuvicMobileSDK.xcframework` and add it t
 
 Create a new file called `euvic_sdk_plugin.dart` and paste all the code you find [here](https://github.com/Clickonometrics/reporting-sdk-flutter/blob/main/lib/euvic_sdk_plugin.dart).
 
-### Android Advertising ID
-To use system ad identifier add this line to your ```AndroidManifest.xml``` file.
+
+### Android Advertising ID (AAID)
+
+It's **required** to provide the application with the AAID. Only with this identifier it's possible to show ads to the given user.
+
+If user's privacy policy on the device does not permit the personalized advertising - no ads will be shown. Euvic Mobile SDK will still report user activity for statistical purposes.
+
+To provide system ad identifier add this line to your `AndroidManifest.xml` file:
 ```xml
 <manifest xlmns:android...>
  ...
