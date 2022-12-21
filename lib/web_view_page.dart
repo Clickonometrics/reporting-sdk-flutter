@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:core';
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -14,7 +15,7 @@ class WebViewPage extends StatefulWidget {
 
 class _WebViewPageState extends State<WebViewPage> {
   static const String apiKey = 'zGvjBvroFc7onruVlmSoy3foBHLG4Upq';
-  static const String userType = 'AAID';
+  String userType = Platform.isIOS ? 'IDFA' : 'AAID';
   String? encodedUserId;
 
  @override

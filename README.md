@@ -13,7 +13,7 @@ Add this dependency to your module's `build.gradle` file:
 ```kotlin
 dependencies {
 	...
-	implementation("io.github.clickonometrics.android:clickonometrics:1.0")
+	implementation("io.github.clickonometrics.android:clickonometrics:1.+")
 }
 ```
 
@@ -21,7 +21,7 @@ dependencies {
 ```groovy
 dependencies {
 	...
-	implementation 'io.github.clickonometrics.android:clickonometrics:1.0'
+	implementation 'io.github.clickonometrics.android:clickonometrics:1.+'
 }
 ```
 
@@ -56,23 +56,17 @@ android {
 
 The library is available via Cocapods so you need add dependency to your Podfile
 ```
-pod 'EuvicMobileSDK', '~> 0.2.0'
+pod 'EuvicMobileSDK', '~> 1.0'
 ```
 You can also use framework binary file `EuvicMobileSDK.xcframework` and add it to your project.
 
 
 ## Configuration
 
-Create a new file called `euvic_sdk_plugin.dart` and paste all the code you find [here](https://github.com/Clickonometrics/reporting-sdk-flutter/blob/main/lib/euvic_sdk_plugin.dart).
+Create a new file called `euvic_sdk_plugin.dart` and paste all the code you find [here]().
 
-
-### Android Advertising ID (AAID)
-
-It's **required** to provide the application with the AAID. Only with this identifier it's possible to show ads to the given user.
-
-If user's privacy policy on the device does not permit the personalized advertising - no ads will be shown. Euvic Mobile SDK will still report user activity for statistical purposes.
-
-To provide system ad identifier add this line to your `AndroidManifest.xml` file:
+### Android Advertising ID
+To use system ad identifier add this line to your ```AndroidManifest.xml``` file.
 ```xml
 <manifest xlmns:android...>
  ...
@@ -104,11 +98,11 @@ Remember to add `NSLocationWhenInUseUsageDescription` in your Info.plist
 
 ## Flutter <-> Android communication bridge
 
-In order for the library to do its job, you need to add a bridge that communicates between Flutter and Android. [Click here](https://github.com/Clickonometrics/reporting-sdk-flutter/blob/main/android/app/src/main/kotlin/pl/speednet/flutter/euvic_sdk_flutter/MainActivity.kt) and copy the code to `MainActivity.kt` in your `android/app/src/main/kotlin/your_project_path/`.
+In order for the library to do its job, you need to add a bridge that communicates between Flutter and Android. [Click here]() and copy the code to `MainActivity.kt` in your `android/app/src/main/kotlin/your_project_path/`.
 
 ## Flutter <-> iOS communication bridge
 
-In order for the library to do its job, you need to add a bridge that communicates between Flutter and iOS. [Click here](https://github.com/Clickonometrics/reporting-sdk-flutter/blob/main/ios/Runner/AppDelegate%2BEuvicMobileBridge.swift) and copy content of `AppDelegate+EuvicMobileBridge.swift` file into your project and add the following to `AppDelegate.swift`
+In order for the library to do its job, you need to add a bridge that communicates between Flutter and iOS. [Click here]() and copy content of `AppDelegate+EuvicMobileBridge.swift` file into your project and add the following to `AppDelegate.swift`
 
 ```swift
 @UIApplicationMain
@@ -241,4 +235,3 @@ Represents a product instance
 | `price` | String | represents products value | Required |
 | `quantity` | int | depending on type of event, it can represents added, removed or in basket quantity of the product | Required |
 | `currency` | String | represents products price currency | Optional |
-

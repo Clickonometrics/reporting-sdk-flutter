@@ -66,5 +66,5 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation 'io.github.clickonometrics.android:clickonometrics:1.0'
+    implementation 'io.github.clickonometrics.android:clickonometrics:1.+'
 }
